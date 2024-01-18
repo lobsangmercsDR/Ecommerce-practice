@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function order() {
+function Order() {
   const [count, setCount] = useState(0);
 
   return (
@@ -10,4 +10,4 @@ function order() {
   );
 }
 
-export default order;
+export default Order;

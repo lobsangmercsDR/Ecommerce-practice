@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-function notFound() {
-  const [count, setCount] = useState(0);
-
+function NotFound() {
   return (
     <>
       <div className="bg-red-100">Not found</div>
@@ -10,4 +8,4 @@ function notFound() {
   );
 }
 
-export default notFound;
+export default NotFound;
