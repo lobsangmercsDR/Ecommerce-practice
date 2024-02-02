@@ -6,6 +6,7 @@ import NotFound from "../notFound";
 import Order from "../Order/Index";
 import Orders from "../Orders";
 import Login from "../Signin";
+import Navbar from "../../Components";
 
 import "./index.css";
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/Orders" element={<Orders />}></Route>
           <Route path="/Signin" element={<Login />}></Route>
         </Routes>
+        <Navbar />
       </BrowserRouter>
     </>
   );
