@@ -1,7 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import CartContext from "../Context/context";
+import { ShoppingCartIcon } from "@heroicons/react/outline";
 
 const Navbar = () => {
+  const context = useContext(CartContext);
   let activeStyle = {
     textDocation: "underline",
   };
@@ -71,7 +75,10 @@ const Navbar = () => {
         <li>
           <NavLink to="/Login">Sign In</NavLink>
         </li>
-        <li>$00</li>
+        <li className="grid grid-cols-2 items-center text-lg ">
+          <ShoppingCartIcon className="h-6 w-6 text-black" />
+          {context.pCount}
+        </li>
       </ul>
     </nav>
   );

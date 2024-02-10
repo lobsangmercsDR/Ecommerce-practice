@@ -3,11 +3,12 @@ import { apiUrl } from "../../Components/APIs/fakeAPI";
 import React from "react";
 import Layout from "../../Components/Layout";
 import Card from "../../Components/Cards/cards";
+import ProductDetails from "../../Components/Cards/productsdetail";
 function HomePage() {
   const [items, setItems] = useState(null);
 
   const platziDataAPI = () => {
-    return "https://api.escuelajs.co/api/v1/products";
+    return "https://fakestoreapi.com/products";
   };
 
   useEffect(() => {
@@ -28,6 +29,7 @@ function HomePage() {
           <Card key={item.id} data={item} />
         ))}
       </div>
+      <ProductDetails></ProductDetails>
     </Layout>
   );
 }
